@@ -5,7 +5,7 @@ import Image from 'next/image';
 ///import tj from '../public/tj.avif';
 //import tom from '../public/tom.avif';
 import { Button } from "@/components/ui/button";
-import { HandHelpingIcon, BuildingIcon, HeartIcon, UsersIcon, PackageIcon, ArrowRight 
+import { HandHelpingIcon, BuildingIcon, HeartIcon, PackageIcon, ArrowRight 
   } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -56,7 +56,7 @@ const Page = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-balance max-w-3xl mx-auto text-foreground">
-            We're connecting businesses with food banks to fight hunger
+            We&apos;re connecting businesses with food banks to fight hunger
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto">
@@ -133,7 +133,7 @@ const Page = () => {
                 </div>
                 <h3 className="text-xl font-medium">Tejas Nagarkar</h3>
                 <p className="text-foreground/60">
-                Hi! My name is Tejas Nagarkar and I’m a junior at Monte Vista High School. I’ve been involved in food service and food banks since the third grade, and giving back to my community has always been a big part of who I am. My intention in starting Feed Forward is to keep that passion alive and empower other students like me who want to make a real difference in their communities. Through this project, I hope to create unity among communities to create lasting change and help those in need! 
+                Hi! My name is Tejas Nagarkar and I&apos;m a junior at Monte Vista High School. I&apos;ve been involved in food service and food banks since the third grade, and giving back to my community has always been a big part of who I am. My intention in starting Feed Forward is to keep that passion alive and empower other students like me who want to make a real difference in their communities. Through this project, I hope to create unity among communities to create lasting change and help those in need! 
                 </p>
               </div>
               <div className="space-y-4">
@@ -142,7 +142,7 @@ const Page = () => {
                 </div>
                 <h3 className="text-xl font-medium">Thomas Liu</h3>
                 <p className="text-foreground/60">
-                My name is Thomas Liu and I'm junior at Monte Vista High School. This past year, I've volunteered at multiple instructional gardens, which has gotten me interested in how my community utilizes and distributes local, healthy produce. This curiosity led to starting Feed Forward with TJ as both an opportunity to make an impact in my community but also to challenge myself to learn more about food waste and sustainable business practices. Happy to work with everyone!
+                My name is Thomas Liu and I&apos;m junior at Monte Vista High School. This past year, I&apos;ve volunteered at multiple instructional gardens, which has gotten me interested in how my community utilizes and distributes local, healthy produce. This curiosity led to starting Feed Forward with TJ as both an opportunity to make an impact in my community but also to challenge myself to learn more about food waste and sustainable business practices. Happy to work with everyone!
                 </p>
               </div>
             </div>
