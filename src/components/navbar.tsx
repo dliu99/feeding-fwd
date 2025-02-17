@@ -9,7 +9,7 @@ export default function NavButton() {
 
   return (
     <Link href="/" onClick={scrollToTop} className="text-xl font-bold text-black hover:text-sage-500 transition-colors">
-      Feeding Forward
+      Feed Forward
     </Link>
   );
 }

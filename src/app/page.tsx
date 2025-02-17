@@ -2,12 +2,12 @@
 
 import NavButton from "@/components/navbar";
 import Image from 'next/image';
-///import tj from '../public/tj.avif';
-//import tom from '../public/tom.avif';
+import tj from '../assets/01.jpg';
 import { Button } from "@/components/ui/button";
 import { HandHelpingIcon, BuildingIcon, HeartIcon, PackageIcon, ArrowRight 
   } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Marquee } from "@/components/magicui/marquee";
 
 const Page = () => {
   const scrollToGetInvolved = () => {
@@ -16,11 +16,11 @@ const Page = () => {
   const scrollMission = () => {
     document.getElementById('our-mission')?.scrollIntoView({ behavior: 'smooth' });
   };
-
+  const images = Array.from({ length: 5 }, (_, i) => require(`@/assets/0${i + 1}.jpg`));
   
 
   const [count, setCount] = useState(0);
-  const targetCount = 100;
+  const targetCount = 150;
 
   useEffect(() => {
     const duration = 1000; // 2 seconds
@@ -42,13 +42,14 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center px-4 bg-warmth-50">
-      <nav className="sticky top-0 z-50 bg-white w-full mx-auto py-4">
+    <div className="flex flex-col items-center bg-warmth-50">
+      <nav className="sticky top-0 z-50 bg-warmth-50 w-full mx-auto p-4">
         <div className="text-center md:text-left">
           <NavButton/>
         </div>
       </nav>
-      <div className=" w-full max-w-6xl mx-auto flex flex-col justify-center text-center space-y-8 pt-16">
+      <div className=" w-full max-w-6xl mx-auto flex flex-col justify-center text-center pt-16">
+        <div className="min-h-screen space-y-8">
         <div className="space-y-4 animate-fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-500 animate-fade-up">
             <HeartIcon className="w-4 h-4" />
@@ -64,7 +65,7 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="flex flex-row items-center justify-center gap-4 pt-4">
+        <div className="flex flex-row items-center justify-center gap-4">
           <Button
             size="lg"
             className="bg-sage-500 hover:bg-sage-600 text-white transition-all duration-200 px-6"
@@ -83,7 +84,24 @@ const Page = () => {
             Learn More <ArrowRight />
           </Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-16" style={{ animationDelay: "400ms" }}>
+        <Marquee className="[--duration:30s] pt-12">
+              {images.map((src, index) => (
+                <Image key={index} src={src} width={300} height={300} alt={`Image ${index+1}.jpg`} style={{objectFit: "cover"}} className="rounded-xl"/>
+              ))}
+        </Marquee>
+        </div>
+        
+        <div className="text-center space-y-8 pb-12 ">
+          <h2 className="text-4xl md:text-5xl font-semibold text-foreground">Our Mission</h2>
+          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
+            After witnessing food waste at school and everyday life, we decided to challenge ourselves to make a genuine change in our community for a problem we truly cared about. 
+            <br></br><br/>
+            At Feed Forward, we hope to foster a community centered around charity and learn more about sustainable food production and distribution. 
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12" style={{ animationDelay: "400ms" }}>
+          
           <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/50 border border-sage-100 transition-all duration-200 hover:shadow-lg hover:shadow-sage-100/50">
             <div className="w-12 h-12 flex items-center justify-center rounded-full bg-sage-100">
               <BuildingIcon className="w-6 h-6 text-sage-500" />
@@ -110,17 +128,6 @@ const Page = () => {
         </div>
         
       </div>
-      <section className="w-full max-w-6xl mx-auto py-24 px-4" id="our-mission">
-        <div className="text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground">Our Mission</h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-          After witnessing food waste at school and everyday life, we decided to challenge ourselves to make a genuine change in our community for a problem we truly cared about. 
-          <br></br><br/>
-          At Feeding Forward, we hope to foster a community centered around charity and learn more about sustainable food production and distribution. 
-          </p>
-        </div>
-        
-      </section>
       {/* About Us Section */}
       <section className="w-full bg-sage-50 py-24">
         <div className="max-w-6xl mx-auto px-4">
