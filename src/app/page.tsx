@@ -48,55 +48,55 @@ const Page = () => {
 
   return (
     <div className="flex flex-col items-center bg-warmth-50">
-      <nav className="sticky top-0 z-50 bg-warmth-50 w-full mx-auto p-4">
+      <nav className="sticky top-0 z-50 bg-sage-50 w-full mx-auto p-4">
         <div className="text-center md:text-left">
           <NavButton/>
         </div>
       </nav>
-      <div className=" w-full max-w-6xl mx-auto flex flex-col justify-center text-center pt-16">
-        <div className="min-h-screen space-y-8">
-        <div className="space-y-4 animate-fade-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-500 animate-fade-up">
-            <HeartIcon className="w-4 h-4" />
-            <span className="text-sm font-medium">{count}+ lbs of food donated</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-balance max-w-3xl mx-auto text-foreground">
-            We&apos;re connecting businesses with food banks to fight hunger
-          </h1>
-          
-          <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto">
-            Help us reduce food waste and support our community.
-          </p>
-        </div>
-
-        <div className="flex flex-row items-center justify-center gap-4">
-          <Button
-            size="lg"
-            className="bg-sage-500 hover:bg-sage-600 text-white transition-all duration-200 px-6"
-            onClick={scrollToGetInvolved}
-          >
-          
-            Partner With Us
+      <div className=" w-full max-w-6xl mx-auto flex flex-col justify-center text-center pt-16 px-4">
+        <div className="min-h-[90vh] space-y-8">
+          <div className="space-y-4 animate-fade-up">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-500 animate-fade-up">
+              <HeartIcon className="w-4 h-4" />
+              <span className="text-sm font-medium">{count}+ lbs of food donated</span>
+            </div>
             
-          </Button>
-          <Button
-            variant="link"
-            size="lg"
-            className="border-sage-200 hover:bg-sage-100 hover:no-underline text-sage-500 transition-all duration-200 px-6"
-            onClick={scrollMission}
-          >
-            Learn More <ArrowRight />
-          </Button>
-        </div>
-        <Marquee className="[--duration:30s] pt-12">
-              {images.map((src, index) => (
-                <Image key={index} src={src} width={300} height={300} alt={`Image ${index+1}.jpg`} style={{objectFit: "cover"}} className="rounded-xl"/>
-              ))}
-        </Marquee>
+            <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-balance max-w-3xl mx-auto text-foreground">
+              We&apos;re connecting businesses with food banks to fight hunger
+            </h1>
+            
+            <p className="text-lg md:text-xl text-foreground/60 max-w-2xl mx-auto">
+              Help us reduce food waste and support our community.
+            </p>
+          </div>
+
+          <div className="flex flex-row items-center justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-sage-500 hover:bg-sage-600 text-white transition-all duration-200 px-6"
+              onClick={scrollToGetInvolved}
+            >
+            
+              Partner With Us
+              
+            </Button>
+            <Button
+              variant="link"
+              size="lg"
+              className="border-sage-200 hover:bg-sage-100 hover:no-underline text-sage-500 transition-all duration-200 px-6"
+              onClick={scrollMission}
+            >
+              Learn More <ArrowRight />
+            </Button>
+          </div>
+          <Marquee className="[--duration:30s] py-8">
+                {images.map((src, index) => (
+                  <Image key={index} src={src} width={250} height={250} alt={`Image ${index+1}.jpg`} style={{objectFit: "cover"}} className="rounded-xl"/>
+                ))}
+          </Marquee>
         </div>
         
-        <div className="text-center space-y-8 pb-12 ">
+        <div className="text-center space-y-8 pb-12">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground">Our Mission</h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             After witnessing food waste at school and everyday life, we decided to challenge ourselves to make a genuine change in our community for a problem we truly cared about. 
