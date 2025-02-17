@@ -2,12 +2,17 @@
 
 import NavButton from "@/components/navbar";
 import Image from 'next/image';
-import tj from '../assets/01.jpg';
 import { Button } from "@/components/ui/button";
 import { HandHelpingIcon, BuildingIcon, HeartIcon, PackageIcon, ArrowRight 
   } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Marquee } from "@/components/magicui/marquee";
+import img01 from "@/assets/01.jpg";
+import img02 from "@/assets/02.jpg";
+import img03 from "@/assets/03.jpg";
+import img04 from "@/assets/04.jpg";
+import img05 from "@/assets/05.jpg";
+
 
 const Page = () => {
   const scrollToGetInvolved = () => {
@@ -16,7 +21,7 @@ const Page = () => {
   const scrollMission = () => {
     document.getElementById('our-mission')?.scrollIntoView({ behavior: 'smooth' });
   };
-  const images = Array.from({ length: 5 }, (_, i) => require(`@/assets/0${i + 1}.jpg`));
+  const images = [img01, img02, img03, img04, img05];
   
 
   const [count, setCount] = useState(0);
