@@ -164,7 +164,7 @@ const Page = () => {
                 </div>
                 <h3 className="text-xl font-medium">Devin Liu</h3>
                 <p className="text-foreground/60">
-                Hi, I'm Devin, a junior at Monte Vista High School. In the past I've volunteered and led service projects for food banks -- there, I learned a lot about food waste and realized the issue was about logistics/convenience, not necessarily the amount of food available. With Feed Forward, I hope to bring that experience and take it to a larger scale. I&apos;m excited to work with my community and other students to make a real difference!
+                Hi, I&apos;m Devin, a junior at Monte Vista High School. In the past I&apos;ve volunteered and led service projects for food banks -- there, I learned a lot about food waste and realized the issue was about logistics/convenience, not necessarily the amount of food available. With Feed Forward, I hope to bring that experience and take it to a larger scale. I&apos;m excited to work with my community and other students to make a real difference!
                 </p>
               </div>
             </div>
