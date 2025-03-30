@@ -25,7 +25,7 @@ const Page = () => {
   
 
   const [count, setCount] = useState(0);
-  const targetCount = 150;
+  const targetCount = 500;
 
   useEffect(() => {
     const duration = 1000; // 2 seconds
@@ -89,6 +89,7 @@ const Page = () => {
               Learn More <ArrowRight />
             </Button>
           </div>
+
           <Marquee className="[--duration:30s] py-8">
                 {images.map((src, index) => (
                   <Image key={index} src={src} width={250} height={250} alt={`Image ${index+1}.jpg`} style={{objectFit: "cover"}} className="rounded-xl"/>
@@ -96,7 +97,7 @@ const Page = () => {
           </Marquee>
         </div>
         
-        <div className="text-center space-y-8 pb-12">
+        <div className="text-center space-y-8 py-12">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground">Our Mission</h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             After witnessing food waste at school and everyday life, we decided to challenge ourselves to make a genuine change in our community for a problem we truly cared about. 
@@ -138,7 +139,7 @@ const Page = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground">About Us</h2>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="space-y-4">
                 <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
                   <Image src="/tj.avif" width={1000} height={1000} alt="TJ" className="rounded-full"/>
@@ -155,6 +156,15 @@ const Page = () => {
                 <h3 className="text-xl font-medium">Thomas Liu</h3>
                 <p className="text-foreground/60">
                 My name is Thomas Liu and I&apos;m junior at Monte Vista High School. This past year, I&apos;ve volunteered at multiple instructional gardens, which has gotten me interested in how my community utilizes and distributes local, healthy produce. This curiosity led to starting Feed Forward with TJ as both an opportunity to make an impact in my community but also to challenge myself to learn more about food waste and sustainable business practices. Happy to work with everyone!
+                </p>
+              </div>
+              <div className="space-y-4">
+              <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
+                  <Image src="/dliu.avif" width={1000} height={1000} alt="Devin" className="rounded-full h-20 w-20"/>
+                </div>
+                <h3 className="text-xl font-medium">Devin Liu</h3>
+                <p className="text-foreground/60">
+                Hi, I'm Devin, a junior at Monte Vista High School. In the past I've volunteered and led service projects for food banks -- there, I learned a lot about food waste and realized the issue was about logistics/convenience, not necessarily the amount of food available. With Feed Forward, I hope to bring that experience and take it to a larger scale. I&apos;m excited to work with my community and other students to make a real difference!
                 </p>
               </div>
             </div>
