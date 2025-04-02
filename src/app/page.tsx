@@ -25,7 +25,7 @@ const Page = () => {
   
 
   const [count, setCount] = useState(0);
-  const targetCount = 500;
+  const targetCount = 1000;
 
   useEffect(() => {
     const duration = 1000; // 2 seconds
@@ -97,8 +97,8 @@ const Page = () => {
           </Marquee>
         </div>
         
-        <div className="text-center space-y-8 py-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-foreground">Our Mission</h2>
+        <div className="text-center space-y-8 py-12" id="our-mission">
+          <h2 className="text-4xl md:text-5xl font-semibold text-foreground" >Our Mission</h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
             After witnessing food waste at school and everyday life, we decided to challenge ourselves to make a genuine change in our community for a problem we truly cared about. 
             <br></br><br/>
@@ -139,7 +139,7 @@ const Page = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-semibold text-foreground">About Us</h2>
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
               <div className="space-y-4">
                 <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
                   <Image src="/tj.avif" width={1000} height={1000} alt="TJ" className="rounded-full"/>
@@ -165,6 +165,15 @@ const Page = () => {
                 <h3 className="text-xl font-medium">Devin Liu</h3>
                 <p className="text-foreground/60">
                 Hi, I&apos;m Devin, a junior at Monte Vista High School. In the past I&apos;ve volunteered and led service projects for food banks -- there, I learned a lot about food waste and realized the issue was about logistics/convenience, not necessarily the amount of food available. With Feed Forward, I hope to bring that experience and take it to a larger scale. I&apos;m excited to work with my community and other students to make a real difference!
+                </p>
+              </div>
+              <div className="space-y-4">
+              <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
+                  <Image src="/braden.avif"  alt="Braden" width={1000} height={1000} className="rounded-full h-20 w-20 object-cover"/>
+                </div>
+                <h3 className="text-xl font-medium">Braden Luu</h3>
+                <p className="text-foreground/60">
+                Hello, my name is Braden Luu and I&apos;m currently a junior at Monte Vista High School. In the past couple years, I&apos;ve worked with many of my peers and organizations to help promote environmental and business sustainability practices. I believe that every meal counts, and I&apos;m dedicated to making a positive impact in our community through Feed Forward. I&apos;m excited to be apart of this initiative and to contribute to a more sustainable future for everyone!
                 </p>
               </div>
             </div>
