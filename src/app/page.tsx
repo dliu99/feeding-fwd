@@ -7,11 +7,6 @@ import { HandHelpingIcon, BuildingIcon, HeartIcon, PackageIcon, ArrowRight
   } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Marquee } from "@/components/magicui/marquee";
-import img01 from "@/assets/01.jpg";
-import img02 from "@/assets/02.jpg";
-import img03 from "@/assets/03.jpg";
-import img04 from "@/assets/04.jpg";
-import img05 from "@/assets/05.jpg";
 
 
 const Page = () => {
@@ -21,11 +16,27 @@ const Page = () => {
   const scrollMission = () => {
     document.getElementById('our-mission')?.scrollIntoView({ behavior: 'smooth' });
   };
-  const images = [img01, img02, img03, img04, img05];
-  
 
   const [count, setCount] = useState(0);
   const targetCount = 1000;
+
+  const [images, setImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    const imageFilenames = [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+
+      // Add more filenames as needed
+    ];
+    setImages(imageFilenames.map(name => `/assets/${name}`));
+  }, []);
 
   useEffect(() => {
     const duration = 1000; // 2 seconds
@@ -142,7 +153,7 @@ const Page = () => {
             <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
               <div className="space-y-4">
                 <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
-                  <Image src="/tj.avif" width={1000} height={1000} alt="TJ" className="rounded-full"/>
+                  <Image src="/tj.avif" width={1000} height={1000} alt="TJ" className="rounded-full h-20 w-20 object-cover"/>
                 </div>
                 <h3 className="text-xl font-medium">Tejas Nagarkar</h3>
                 <p className="text-foreground/60">
@@ -151,7 +162,7 @@ const Page = () => {
               </div>
               <div className="space-y-4">
               <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
-                  <Image src="/tom.avif" width={1000} height={1000} alt="Thomas" className="rounded-full h-20 w-20"/>
+                  <Image src="/tom.avif" width={1000} height={1000} alt="Thomas" className="rounded-full h-20 w-20 object-cover"/>
                 </div>
                 <h3 className="text-xl font-medium">Thomas Liu</h3>
                 <p className="text-foreground/60">
