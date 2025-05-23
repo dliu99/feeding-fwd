@@ -22,7 +22,7 @@ export const metadata = {
     description: "We're connecting businesses with food banks to fight hunger.",
     images: [
       {
-        url: "/logo.avif", // Path relative to public/
+        url: "https://feed-fwd.org/logo.png", // Path relative to public/
         width: 512,
         height: 512,
         alt: "Feed Forward",
@@ -45,6 +45,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content="Feed Forward" />
+        <meta property="og:description" content="We're connecting businesses with food banks to fight hunger." />
+        <meta property="og:image" content="https://feed-fwd.org/logo.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Feed Forward" />
+        <meta name="twitter:description" content="We're connecting businesses with food banks to fight hunger." />
+        <meta name="twitter:image" content="/logo.avif" />
+      </head>
       <body
         className={inter.className}//${geistSans.variable} ${geistMono.variable} 
       >
