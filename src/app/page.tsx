@@ -18,7 +18,7 @@ const Page = () => {
   };
 
   const [count, setCount] = useState(0);
-  const targetCount = 1000;
+  const targetCount = 4000;
 
   const [images, setImages] = useState<string[]>([]);
 
@@ -107,7 +107,9 @@ const Page = () => {
                 ))}
           </Marquee>
         </div>
-        
+        </div>
+       
+
         <div className="text-center space-y-8 py-12" id="our-mission">
           <h2 className="text-4xl md:text-5xl font-semibold text-foreground" >Our Mission</h2>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
@@ -116,8 +118,97 @@ const Page = () => {
             At Feed Forward, we hope to foster a community centered around charity and learn more about sustainable food production and distribution. 
           </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12" style={{ animationDelay: "400ms" }}>
+        <section className="py-12  w-full">
+          <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <h3 className="text-4xl font-bold text-sage-500">4+</h3>
+              <p className="text-foreground/60">Markets</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-4xl font-bold text-sage-500">3</h3>
+              <p className="text-foreground/60">Chapters</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-4xl font-bold text-sage-500">30+</h3>
+              <p className="text-foreground/60">Volunteers</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-4xl font-bold text-sage-500">{targetCount.toLocaleString()}+</h3>
+              <p className="text-foreground/60">Pounds of Food Donated</p>
+            </div>
+          </div>
+          </div>
+        </section>
+        
+        
+      
+      {/* About Us Section */}
+      <section className="w-full bg-sage-50 py-24">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl font-semibold text-foreground">Meet the Team</h2>
+            <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+              <div>
+                <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100 mb-4">
+                  <Image src="/tj.avif" width={1000} height={1000} alt="TJ" className="rounded-full h-20 w-20 object-cover"/>
+                </div>
+                <h3 className="text-xl font-medium">Tejas Nagarkar</h3>
+                <p className="text-foreground/60 mt-1">
+                  Co-Founder
+                </p>
+              </div>
+              <div>
+                <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100 mb-4">
+                  <Image src="/tom.avif" width={1000} height={1000} alt="Thomas" className="rounded-full h-20 w-20 object-cover"/>
+                </div>
+                <h3 className="text-xl font-medium">Thomas Liu</h3>
+                <p className="text-foreground/60 mt-1">
+                  Co-Founder
+                </p>
+              </div>
+              <div>
+                <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100 mb-4">
+                  <Image src="/dliu.avif" width={1000} height={1000} alt="Devin" className="rounded-full h-20 w-20"/>
+                </div>
+                <h3 className="text-xl font-medium">Devin Liu</h3>
+                <p className="text-foreground/60 mt-1">
+                  Operations
+                </p>
+              </div>
+              <div>
+                <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100 mb-4">
+                  <Image src="/braden.avif"  alt="Braden" width={1000} height={1000} className="rounded-full h-20 w-20 object-cover"/>
+                </div>
+                <h3 className="text-xl font-medium">Braden Luu</h3>
+                <p className="text-foreground/60 mt-1">
+                  Outreach
+                </p>
+              </div>
+              <div>
+                <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100 mb-4">
+                  <Image src="/scott.avif"  alt="Scott" width={1000} height={1000} className="rounded-full h-20 w-20 object-cover"/>
+                </div>
+                <h3 className="text-xl font-medium">Scott Wang</h3>
+                <p className="text-foreground/60 mt-1">
+                  Chapters
+                </p>
+              </div>
+              <div>
+                <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100 mb-4">
+                  <Image src="/orion.avif"  alt="Orion" width={1000} height={1000} className="rounded-full h-20 w-20 object-cover"/>
+                </div>
+                <h3 className="text-xl font-medium">Orion Olmstead</h3>
+                <p className="text-foreground/60 mt-1">
+                  Director @ Fremont
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Get Involved Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 max-w-6xl" style={{ animationDelay: "400ms" }}>
           
           <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/50 border border-sage-100 transition-all duration-200 hover:shadow-lg hover:shadow-sage-100/50">
             <div className="w-12 h-12 flex items-center justify-center rounded-full bg-sage-100">
@@ -143,59 +234,10 @@ const Page = () => {
             <p className="text-foreground/60 text-center">Together, we can create lasting change and support those in need!</p>
           </div>
         </div>
-        
-      </div>
-      {/* About Us Section */}
-      <section className="w-full bg-sage-50 py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-semibold text-foreground">About Us</h2>
-            <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              <div className="space-y-4">
-                <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
-                  <Image src="/tj.avif" width={1000} height={1000} alt="TJ" className="rounded-full h-20 w-20 object-cover"/>
-                </div>
-                <h3 className="text-xl font-medium">Tejas Nagarkar</h3>
-                <p className="text-foreground/60">
-                Hi! My name is Tejas Nagarkar and I&apos;m a junior at Monte Vista High School. I&apos;ve been involved in food service and food banks since the third grade, and giving back to my community has always been a big part of who I am. My intention in starting Feed Forward is to keep that passion alive and empower other students like me who want to make a real difference in their communities. Through this project, I hope to create unity among communities to create lasting change and help those in need! 
-                </p>
-              </div>
-              <div className="space-y-4">
-              <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
-                  <Image src="/tom.avif" width={1000} height={1000} alt="Thomas" className="rounded-full h-20 w-20 object-cover"/>
-                </div>
-                <h3 className="text-xl font-medium">Thomas Liu</h3>
-                <p className="text-foreground/60">
-                My name is Thomas Liu and I&apos;m junior at Monte Vista High School. This past year, I&apos;ve volunteered at multiple instructional gardens, which has gotten me interested in how my community utilizes and distributes local, healthy produce. This curiosity led to starting Feed Forward with TJ as both an opportunity to make an impact in my community but also to challenge myself to learn more about food waste and sustainable business practices. Happy to work with everyone!
-                </p>
-              </div>
-              <div className="space-y-4">
-              <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
-                  <Image src="/dliu.avif" width={1000} height={1000} alt="Devin" className="rounded-full h-20 w-20"/>
-                </div>
-                <h3 className="text-xl font-medium">Devin Liu</h3>
-                <p className="text-foreground/60">
-                Hi, I&apos;m Devin, a junior at Monte Vista High School. In the past I&apos;ve volunteered and led service projects for food banks -- there, I learned a lot about food waste and realized the issue was about logistics/convenience, not necessarily the amount of food available. With Feed Forward, I hope to bring that experience and take it to a larger scale. I&apos;m excited to work with my community and other students to make a real difference!
-                </p>
-              </div>
-              <div className="space-y-4">
-              <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100">
-                  <Image src="/braden.avif"  alt="Braden" width={1000} height={1000} className="rounded-full h-20 w-20 object-cover"/>
-                </div>
-                <h3 className="text-xl font-medium">Braden Luu</h3>
-                <p className="text-foreground/60">
-                Hello, my name is Braden Luu and I&apos;m currently a junior at Monte Vista High School. In the past couple years, I&apos;ve worked with many of my peers and organizations to help promote environmental and business sustainability practices. I believe that every meal counts, and I&apos;m dedicated to making a positive impact in our community through Feed Forward. I&apos;m excited to be apart of this initiative and to contribute to a more sustainable future for everyone!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Get Involved Section */}
       <section id="get-involved" className="w-full max-w-6xl mx-auto py-24 px-4">
         <div className="text-center space-y-8">
           <h2 className="text-3xl md:text-4xl font-semibold text-foreground">Interested?</h2>
-
+          <h1 className="text-lg text-foreground/60">Contact us via email at feedingforward2024@gmail.com</h1>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto pt-8">
             <div className="p-6 rounded-2xl bg-white border border-sage-100 space-y-4">
               <div className="w-12 h-12 mx-auto flex items-center justify-center rounded-full bg-sage-100">
@@ -216,11 +258,11 @@ const Page = () => {
               <h3 className="text-xl font-medium">For Volunteers</h3>
               
               <p className="text-foreground/60">
-                Help us make a difference in our community!
+                Contact us via Instagram and help us make a difference in our community!
               </p>
               <Button className="bg-sage-500 hover:bg-sage-600 text-white">
-                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfPRzhR38-kC-nzUETlmdNvkqWjNIqI7Vo1z_YigEfP_7aceQ/viewform">
-                Register as a Volunteer
+                <a target="_blank" href="https://www.instagram.com/feeding.forward">
+                Contact Us
                 </a>
               </Button>
             </div>
