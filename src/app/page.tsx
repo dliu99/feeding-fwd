@@ -173,7 +173,7 @@ const Page = () => {
                 </div>
                 <h3 className="text-xl font-medium">Devin Liu</h3>
                 <p className="text-foreground/60 mt-1">
-                  Operations
+                  Development
                 </p>
               </div>
               <div>
@@ -191,14 +191,14 @@ const Page = () => {
                 </div>
                 <h3 className="text-xl font-medium">Scott Wang</h3>
                 <p className="text-foreground/60 mt-1">
-                  Chapters
+                  Operations
                 </p>
               </div>
               <div>
                 <div className="w-20 h-20 mx-auto flex items-center justify-center rounded-full bg-sage-100 mb-4">
                   <Image src="/orion.avif"  alt="Orion" width={1000} height={1000} className="rounded-full h-20 w-20 object-cover"/>
                 </div>
-                <h3 className="text-xl font-medium">Orion Olmstead</h3>
+                <h3 className="text-xl font-medium">Orion Olmsted</h3>
                 <p className="text-foreground/60 mt-1">
                   Director @ Fremont
                 </p>
