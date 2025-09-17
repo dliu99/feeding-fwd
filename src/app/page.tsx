@@ -18,9 +18,12 @@ const Page = () => {
   };
 
   const [count, setCount] = useState(0);
-  const targetCount = 4000;
+  const targetCount = 6000;
 
   const [images, setImages] = useState<string[]>([]);
+  
+  // Calculate meals provided
+  const meals = Math.round(targetCount / 1.2);
 
   useEffect(() => {
     const imageFilenames = [
@@ -120,22 +123,26 @@ const Page = () => {
         </div>
         <section className="py-12  w-full">
           <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
             <div className="space-y-2">
               <h3 className="text-4xl font-bold text-sage-500">4+</h3>
               <p className="text-foreground/60">Markets</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-sage-500">3</h3>
+              <h3 className="text-4xl font-bold text-sage-500">4</h3>
               <p className="text-foreground/60">Chapters</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-sage-500">30+</h3>
+              <h3 className="text-4xl font-bold text-sage-500">50+</h3>
               <p className="text-foreground/60">Volunteers</p>
             </div>
             <div className="space-y-2">
               <h3 className="text-4xl font-bold text-sage-500">{targetCount.toLocaleString()}+</h3>
               <p className="text-foreground/60">Pounds of Food Donated</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-4xl font-bold text-sage-500">{meals.toLocaleString()}+</h3>
+              <p className="text-foreground/60">Meals Provided</p>
             </div>
           </div>
           </div>
