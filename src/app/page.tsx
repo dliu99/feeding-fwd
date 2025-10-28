@@ -265,10 +265,10 @@ const Page = () => {
               <h3 className="text-xl font-medium">For Volunteers</h3>
               
               <p className="text-foreground/60">
-                Contact us via Instagram and help us make a difference in our community!
+                Contact us via email and help us make a difference in our community!
               </p>
               <Button className="bg-sage-500 hover:bg-sage-600 text-white">
-                <a target="_blank" href="https://www.instagram.com/feeding.forward">
+                <a target="_blank" href="mailto:feedingforward2024@gmail.com">
                 Contact Us
                 </a>
               </Button>
