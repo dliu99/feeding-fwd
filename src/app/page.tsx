@@ -2,6 +2,7 @@
 
 import NavButton from "@/components/navbar";
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { HandHelpingIcon, BuildingIcon, HeartIcon, PackageIcon, ArrowRight 
   } from "lucide-react";
@@ -145,6 +146,39 @@ const Page = () => {
               <p className="text-foreground/60">Meals Provided</p>
             </div>
           </div>
+          </div>
+        </section>
+        
+        {/* Logos Section */}
+        <section className="w-full py-12">
+          <div className="max-w-6xl mx-auto px-4">
+            <Marquee className="[--duration:30s] py-8" reverse={true}>
+              <Link href="https://www.openheartkitchen.org/" target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center justify-center w-48 h-24">
+                  <Image src="/assets/ohk.webp" width={200} height={200} alt="Open Heart Kitchen" className="max-w-full max-h-full object-contain cursor-pointer"/>
+                </div>
+              </Link>
+              <Link href="https://www.pcfma.org/" target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center justify-center w-48 h-24">
+                  <Image src="/assets/pcfma.webp" width={200} height={200} alt="Pacific Coast Farmers Market Association" className="max-w-full max-h-full object-contain cursor-pointer"/>
+                </div>
+              </Link>
+              <Link href="https://www.slzhelp.org/" target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center justify-center w-48 h-24">
+                  <Image src="/assets/slz.webp" width={200} height={200} alt="San Lorenzo Family Help Center" className="max-w-full max-h-full object-contain cursor-pointer"/>
+                </div>
+              </Link>
+              <Link href="https://www.tcvfoodbank.org/" target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center justify-center w-48 h-24">
+                  <Image src="/assets/tcv.webp" width={100} height={200} alt="TCV Food Bank and Mobile Pantry" className="max-w-full max-h-full object/contain cursor-pointer"/>
+                </div>
+              </Link>
+              <Link href="https://www.trivalleyhaven.org/" target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center justify-center w-48 h-24">
+                  <Image src="/assets/tvh.webp" width={200} height={200} alt="Tri Valley Haven" className="max-w-full max-h-full object-contain cursor-pointer"/>
+                </div>
+              </Link>
+            </Marquee>
           </div>
         </section>
         
