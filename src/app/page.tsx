@@ -24,7 +24,7 @@ const Page = () => {
   const [images, setImages] = useState<string[]>([]);
   
   // Calculate meals provided
-  const meals = Math.round(targetCount / 1.2);
+  const meals = 6741;//Math.round(targetCount / 1.2);
 
   useEffect(() => {
     const imageFilenames = [
