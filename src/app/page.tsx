@@ -18,7 +18,7 @@ const Page = () => {
   };
 
   const [count, setCount] = useState(0);
-  const targetCount = 6000;
+  const targetCount = 8000;
 
   const [images, setImages] = useState<string[]>([]);
   
@@ -125,7 +125,7 @@ const Page = () => {
           <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center">
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-sage-500">4+</h3>
+              <h3 className="text-4xl font-bold text-sage-500">7+</h3>
               <p className="text-foreground/60">Markets</p>
             </div>
             <div className="space-y-2">
@@ -133,7 +133,7 @@ const Page = () => {
               <p className="text-foreground/60">Chapters</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-4xl font-bold text-sage-500">50+</h3>
+              <h3 className="text-4xl font-bold text-sage-500">80+</h3>
               <p className="text-foreground/60">Volunteers</p>
             </div>
             <div className="space-y-2">
